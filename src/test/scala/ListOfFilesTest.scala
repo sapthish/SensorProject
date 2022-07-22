@@ -3,12 +3,11 @@ import org.scalatest.prop.Checkers
 
 class ListOfFilesTest extends FunSuite {
 
-test("test") {
+  test("tet"){
+    val a = new ListOfFiles("src/main/resources/").getListOfFiles
+    assert(a != null)
+  }
 
-  val l = new ListOfFiles
-
-  assert(l.getListOfFiles("src/main/resources/") != null)
-}
 
 
 }

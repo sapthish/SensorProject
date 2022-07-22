@@ -1,8 +1,8 @@
 import java.io.File
 
-class ListOfFiles {
+class ListOfFiles(dir: String) extends GetFiles {
 
-  def getListOfFiles(dir: String):List[File] = {
+  def getListOfFiles:List[File] = {
     val d = new File(dir)
     if (d.exists && d.isDirectory) {
       d.listFiles.filter(_.isFile).toList
